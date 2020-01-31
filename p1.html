@@ -1,0 +1,42 @@
+<!--Создаем элементы калькулятора. Изменять вид элементов страницы будем в таблице стилей, для этого подключим файл style.css-->
+<!--Логика работы калькулятора будет описана в файле javascript, поэтому подключим файл js1.js-->
+<!--калькулятор будет состоять из текстового поля для ввода и вывода числового значения и 18 кнопок, каждой прописана функция онклик-->
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css"> <!--таблица стилей-->
+	<title>Это супер-пупер калькулятор</title> <!--заголовок страницы-->
+
+</head>  
+<body>
+ <script type="text/javascript" src="js1.js"></script> <!--логика работы калькулятора-->
+  <div align="center">  <!--все содержимое внутри этого тега будет выравнено по центру-->
+	<input id="result" type="text" size="11" name="result" value="0"> <!--инпут для отображения вводимых чисел и вывода результата-->
+	<!--элемент с индентификатором result, типом text, размер шрифта 11, начальное значение 0-->
+	<br> <!--переход на новую строку-->
+	<button class="button" onclick="addDigit(7)">7</button> <!--кнопка добавить цифру 7, при нажатии вызывается функция addDigit() с аргументом-->
+	<button class="button" onclick="addDigit(8)">8</button> <!--аналогичная кнопка-->
+	<button class="button" onclick="addDigit(9)">9</button> <!--аналогичная кнопка-->
+	<button class="button" onclick="operation(0)">/</button> <!--кнопка выбора арифметического действия, в данном случае деления-->
+	<br> <!--переход на новую строку-->
+	<button class="button" onclick="addDigit(4)">4</button> <!--аналогичная кнопка-->
+	<button class="button" onclick="addDigit(5)">5</button> <!--аналогичная кнопка-->
+	<button class="button" onclick="addDigit(6)">6</button> <!--аналогичная кнопка-->
+	<button class="button" onclick="operation(1)">*</button> <!--кнопка выбора арифметического действия *-->
+	<br> <!--переход на новую строку-->
+	<button class="button" onclick="addDigit(1)">1</button> <!--аналогичная кнопка-->
+	<button class="button" onclick="addDigit(2)">2</button> <!--аналогичная кнопка-->
+	<button class="button" onclick="addDigit(3)">3</button> <!--аналогичная кнопка-->
+	<button class="button" onclick="operation(2)">+</button> <!--кнопка выбора арифметического действия *-->
+	<br> <!--переход на новую строку-->
+	<button class="button" id="zero" onclick="addDigit(0)">0</button> <!--кнопка добавить цифру 0, при нажатии вызывается функция addDigit() с аргументом-->
+	<button class="button" onclick="point()">.</button> <!--кнопка добавить точку, при вводе вещественного числа-->
+	<button class="button" id="resetAll" onclick="resetAll()">C</button> <!--кнопка сбросить в начальные уставновки параметры переменных и поля ввода-->
+	<button class="button" onclick="operation(3)">-</button> <!--кнопка выбора арифметического действия - -->
+	<br> <!--переход на новую строку-->
+	<button class="button" id="calculate" onclick="calculate()">=</button> <!--кнопка вычислить-->
+	<button class="button" onclick="minus_number()">(-)</button> <!--кнопка знака числа-->
+  </div> 	 
+	
+</body>
+</html>
